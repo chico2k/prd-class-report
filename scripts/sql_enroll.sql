@@ -16,4 +16,4 @@ WHERE
     1 = 1
     AND PA_ENROLL_SEAT.STUD_ID IS NOT NULL
     /** and [security: PA_SCHED] */
-    /** and PA_SCHD.SCHD_ID in [ScheduleSearch] */
+    /** and PA_SCHED.SCHD_ID in [ScheduleSearch] */

@@ -19,4 +19,4 @@ FROM
 WHERE
     1 = 1
     /** and [security: PA_SCHED] */
-    /** and PA_SCHD.SCHD_ID in [ScheduleSearch] */
+    /** and PA_SCHED.SCHD_ID in [ScheduleSearch] */

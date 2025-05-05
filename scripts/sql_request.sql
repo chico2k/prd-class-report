@@ -19,7 +19,7 @@ FROM
             PA_SCHED
         WHERE
             1 = 1
-            /** and PA_SCHD.SCHD_ID in [ScheduleSearch] */
+            /** and PA_SCHED.SCHD_ID in [ScheduleSearch] */
     ) BASIS
     LEFT JOIN PA_RQST ON BASIS.CPNT_ID = PA_RQST.CPNT_ID
     AND BASIS.CPNT_TYP_ID = PA_RQST.CPNT_TYP_ID

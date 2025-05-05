@@ -783,7 +783,7 @@ function isPreviewMode() {
             <property name="odaDriverClass">de.simplicit.vjdbc.VirtualDriverBirtWrapper</property>
             <property name="odaURL">jdbc:vjdbc:servlet:https://landschaft-stage.lms.sapsf.eu/vjdbc/vjdbc,db10g</property>
             <property name="odaUser">galla@mutably.io</property>
-            <encrypted-property name="odaPassword" encryptionID="base64">ZXlKaGJHY2lPaUpTVTBFaUxDSjBlWEFpT2lKS1YxUWlmUT09LmV5SlZVMFZTU1VRaU9pSm5ZV3hzWVVCdGRYUmhZbXg1TG1sdklpd2lZMnhwWlc1MFNVUWlPaUk0UVVFd05qRTBNelZDUkVReFFqYzNSak00UlVWR1JEZ3hSVVl5TUVVMU1qZzBPRVExTkVNMlFqQTJNRVV3TlRrMlFUYzRNamt6TkRjM056WXhNRVl4SWl3aVJWUkJJam9pTVRjME5qSTRNRE0wTlRneE5DSjkuSGh1RVNVaEtsNGV3OVlNWDJlV0dldEczU01pV0lHa2ZNeW5IT0NBWHZXTmFiNjEzanlpRFdERnE5dXhXeWF6b2xFWVBsMFN1YWVwRW5yMWxEemxpRFJWY2R6UGp0Q2FWUlU3N2RlSTFYdVBxU3Q3S2s5S3lmeGNxTXhVNXlMczJ3d0Y4UEQwOWJpMTFrUGlCS1c0eF9XOGtoc2l2V2R0MUZIeEw1dzJKb19GS1hkYkdiRjR1THdMbTZBZnFIRnVOWTF0MXlkZl9IUWk2aF8wb1N5S2NHN3RTS0cwTWlCeEZCWG9MOTRVNDFjTV9UVnJ2WGxURjJIeUwwSG1QbHQtelVCWFVPbXhwSnk1dW5PbExVUDUwRnVIUFhVa2ZqaExObGtRbVFRZkwxaXFvYkpSOW9oM1pZaUVHeUdteEZJQ2ZFQlA3d0JEWnBVZWVEbV9kcWl0c2xBNlloUVhwZFNfV3VoMFIxdV9CSkZlZDRsOGVSVk9mYUIxWm5mTHZRaFM5MjZrTEd5SHUzRmpPNFNzdllfQlhQQXZDTDVkUlJLem1YRXhaWE02bGIwQjY0d3VQTkFCUGFJYWwwY2hzc0pwTDNLY0s4NURBT0hSU05OdnoyemJBOVF3NmJiVjByMEo2bkk0N2t5QTNaOVc1MWx0eUFqQlNLdzJwZEs2blMwZjA=</encrypted-property>
+            <encrypted-property name="odaPassword" encryptionID="base64">ZXlKaGJHY2lPaUpTVTBFaUxDSjBlWEFpT2lKS1YxUWlmUT09LmV5SlZVMFZTU1VRaU9pSm5ZV3hzWVVCdGRYUmhZbXg1TG1sdklpd2lZMnhwWlc1MFNVUWlPaUk0UVVFd05qRTBNelZDUkVReFFqYzNSak00UlVWR1JEZ3hSVVl5TUVVMU1qZzBPRVExTkVNMlFqQTJNRVV3TlRrMlFUYzRNamt6TkRjM056WXhNRVl4SWl3aVJWUkJJam9pTVRjME5qWXdOemc1TkRBM09DSjkuYVVnNlVmWWFjNU5POThubnAxaTBpMDdCVTZVdEtIYy1GcENhaU9sYkFCSGZaR3pjMkxLN2VDZlVkcmlmdmtCc2kxaTRMSkgzZjExeXJraFlVai15c19RS3VEMFBKWGVtdWNHanRzQ1ZUb1RnTWdhV25yVTdramJMamhLejItTTJpS2hCSDh4WE9Kc1hVS21hUE0xdndyTlJsa0ZhckVqcVAwTmRvQzNGN1NZTlRhZXJZMVJxQ3AweDRFRnBqZ2ZfRGRNTUF0djJnN2xzanpScDl4a3Q4b1p6SUFZbWhteGtzbFF3TzA1bTNxWHBHYjUwODhZdERQbUt1TXRCWl9pVHQ4OXlpSDh5aEF5MFZnYjNzM0FuOTJqWnBkWE5NNkkyUHJjUFdJazAwS0ItYlg0MDkwRmJyMnFxN0tsRWZHSm1TaVlPOFdad0w0Y3dKQm9QdHl6dXpJQURhYzBCLU1CcGZDRTJINnNsQ2pSVEFvVThIMkRJcmkxX2V6eDhpOFVWc1RmNUZHZUNyZk1aUndPMGs0eS1GTS0yWWhPUkVlSVZ3QkFlZmtndHRzRVhYVGRjSHI0ekJvWnZRRU45MHdNRG91TTFNUDdLbjk1SVhHZGdpVGR1OEwyMnFLYnA4RmZaMHhpSUY4YXhEdFJieDQ2NkF0XzFXRURzb2dhcTY1OWg=</encrypted-property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -968,8 +968,9 @@ FROM
 WHERE
     1 = 1
     AND PA_ENROLL_SEAT.STUD_ID IS NOT NULL
+    /** and PA_SCHED.SCHD_ID in [ScheduleSearch] */
     /** and [security: PA_SCHED] */
-    /** and PA_SCHD.SCHD_ID in [ScheduleSearch] */]]></xml-property>
+]]></xml-property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="sched" id="7302">
             <list-property name="columnHints">
@@ -1199,8 +1200,9 @@ FROM
     LEFT JOIN PA_CPNT_TYPE on PA_CPNT_TYPE.CPNT_TYP_ID = PA_CPNT.CPNT_TYP_ID
 WHERE
     1 = 1
+    /** and PA_SCHED.SCHD_ID in [ScheduleSearch] */
     /** and [security: PA_SCHED] */
-    /** and PA_SCHD.SCHD_ID in [ScheduleSearch] */]]></xml-property>
+]]></xml-property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="request" id="7350">
             <list-property name="columnHints">
@@ -1391,7 +1393,7 @@ FROM
             PA_SCHED
         WHERE
             1 = 1
-            /** and PA_SCHD.SCHD_ID in [ScheduleSearch] */
+            /** and PA_SCHED.SCHD_ID in [ScheduleSearch] */
     ) BASIS
     LEFT JOIN PA_RQST ON BASIS.CPNT_ID = PA_RQST.CPNT_ID
     AND BASIS.CPNT_TYP_ID = PA_RQST.CPNT_TYP_ID
