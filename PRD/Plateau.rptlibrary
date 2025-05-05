@@ -1,0 +1,2229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="comments">Copyright (c) 2011 SuccessFactors</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 2.6.1.v20100902 Build &lt;2.6.1.v20100915-1750></property>
+    <property name="units">in</property>
+    <parameters>
+        <scalar-parameter name="ApprovalProcessIDSearch" id="9">
+            <xml-property name="customXml"><![CDATA[SelectorName=ApprovalProcessReport]]></xml-property>
+            <text-property name="promptText">label.ApprovalProcessID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ApprovalRoleIDSearch" id="10">
+            <xml-property name="customXml"><![CDATA[SelectorName=JobRole]]></xml-property>
+            <text-property name="promptText">label.JobRoleID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AssessmentProcessSearch" id="11">
+            <xml-property name="customXml"><![CDATA[SelectorName=AssessmentProcess]]></xml-property>
+            <text-property name="promptText">label.AssessmentProcess</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AssessmentSurveySearch" id="12">
+            <xml-property name="customXml"><![CDATA[SelectorName=AssessmentSurvey]]></xml-property>
+            <text-property name="promptText">label.AssessmentSurvey</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CaseSensitiveSearch" id="1777">
+            <text-property name="promptText">label.CaseSensitiveSearch</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Y</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">label.Yes</property>
+                </structure>
+                <structure>
+                    <property name="value">N</property>
+                    <property name="label">label.No</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ClassIDSearch" id="14">
+            <xml-property name="customXml"><![CDATA[SelectorName=Class]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.ClassID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompetencyProfileSearch" id="17">
+            <xml-property name="customXml"><![CDATA[SelectorName=ProficiencyProfile]]></xml-property>
+            <text-property name="promptText">label.ProficiencyProfile</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompetencySearch" id="16">
+            <xml-property name="customXml"><![CDATA[SelectorName=Competency]]></xml-property>
+            <text-property name="promptText">label.Competency</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CompletionStatusSearch" id="7">
+            <xml-property name="customXml"><![CDATA[SelectorName=CompletionStatus]]></xml-property>
+            <text-property name="promptText">label.CompletionStatus</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ContentObjectSearch" id="41">
+            <xml-property name="customXml"><![CDATA[SelectorName=AiccScormContentObjectReport]]></xml-property>
+            <text-property name="promptText">label.ContentObject</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CurriculumSearch" id="18">
+            <xml-property name="customXml"><![CDATA[SelectorName=Qualification]]></xml-property>
+            <text-property name="promptText">label.Qualification</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CustomResourceSearch" id="19">
+            <xml-property name="customXml"><![CDATA[SelectorName=CustomResource]]></xml-property>
+            <text-property name="promptText">label.CustomResource</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DocumentSearch" id="20">
+            <xml-property name="customXml"><![CDATA[SelectorName=Document]]></xml-property>
+            <text-property name="promptText">label.Document</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DomainSearch" id="15">
+            <xml-property name="customXml"><![CDATA[SelectorName=Domain;Type=TreeNode]]></xml-property>
+            <text-property name="promptText">label.Domain</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="alignment">auto</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="EquipmentSearch" id="21">
+            <xml-property name="customXml"><![CDATA[SelectorName=Equipment]]></xml-property>
+            <text-property name="promptText">label.Equipment</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="EquipmentStatusSearch" id="30">
+            <xml-property name="customXml"><![CDATA[SelectorName=EquipmentStatus]]></xml-property>
+            <text-property name="promptText">label.EquipmentStatus</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ExamNameSearch" id="22">
+            <xml-property name="customXml"><![CDATA[SelectorName=Exam]]></xml-property>
+            <text-property name="promptText">label.ExamName</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="FacilitySearch" id="32">
+            <xml-property name="customXml"><![CDATA[SelectorName=Facility]]></xml-property>
+            <text-property name="promptText">label.Facility</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="HolidayProfileSearch" id="33">
+            <xml-property name="customXml"><![CDATA[SelectorName=HolidayProfile]]></xml-property>
+            <text-property name="promptText">label.HolidayProfile</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IncludePreviousItemAssociations" id="1256">
+            <text-property name="promptText">label.questionnaireSurveys.Report.ItemAssociation</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Y</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="label">label.Yes</property>
+                </structure>
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">label.No</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="InstructorSearch" id="34">
+            <xml-property name="customXml"><![CDATA[SelectorName=Instructor]]></xml-property>
+            <text-property name="promptText">label.Instructor</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ItemSearch" id="6">
+            <xml-property name="customXml"><![CDATA[SelectorName=Component;Type=Component]]></xml-property>
+            <text-property name="promptText">label.Component</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ItemTypeSearch" id="23">
+            <xml-property name="customXml"><![CDATA[SelectorName=ComponentType]]></xml-property>
+            <text-property name="promptText">label.ComponentType</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="JobPositionSearch" id="24">
+            <xml-property name="customXml"><![CDATA[SelectorName=JobPosition]]></xml-property>
+            <text-property name="promptText">label.JobPosition</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="LearningEventFromDate" id="980">
+            <text-property name="promptText">label.LearningEventFromDate</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Short Date</property>
+                <property name="pattern">Short Date</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="LearningEventToDate" id="981">
+            <text-property name="promptText">label.LearningEventToDate</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Short Date</property>
+                <property name="pattern">Short Date</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AuditDateRangeFrom" id="983">
+            <text-property name="promptText">label.fromDate</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Short Date</property>
+                <property name="pattern">Short Date</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AuditDateRangeTo" id="984">
+            <text-property name="promptText">label.toDate</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Short Date</property>
+                <property name="pattern">Short Date</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="LocationSearch" id="25">
+            <xml-property name="customXml"><![CDATA[SelectorName=Location]]></xml-property>
+            <text-property name="promptText">label.Location</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="MaskStudentID" id="73">
+            <text-property name="helpText">label.MaskStudentIDs</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="MaterialIDSearch" id="26">
+            <xml-property name="customXml"><![CDATA[SelectorName=MaterialType]]></xml-property>
+            <text-property name="promptText">label.MaterialID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OrganizationSearch" id="27">
+            <xml-property name="customXml"><![CDATA[SelectorName=Organization;Type=TreeNode]]></xml-property>
+            <text-property name="promptText">label.Organization</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="GroupSearch" id="411">
+            <xml-property name="customXml"><![CDATA[SelectorName=Group]]></xml-property>
+            <text-property name="promptText">label.Group</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OrganizationSearchPicker" id="3698">
+            <xml-property name="customXml"><![CDATA[SelectorName=Organization;Picker=true]]></xml-property>
+            <text-property name="promptText">label.Organization</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="PageBreak" id="120">
+            <text-property name="helpText">label.PageBreakBetweenRecords</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="ProficiencyProfileIDSearch" id="1775">
+            <xml-property name="customXml"><![CDATA[SelectorName=ProficiencyProfile]]></xml-property>
+            <text-property name="promptText">label.ProficiencyProfile</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="QualificationSearch" id="51">
+            <xml-property name="customXml"><![CDATA[SelectorName=Qualification]]></xml-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="QuestionnaireSurveyStatus" id="1772">
+            <text-property name="promptText">label.questionnaireSurveys.SurveyStatus</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Y</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">label.Active</property>
+                </structure>
+                <structure>
+                    <property name="value">N</property>
+                    <property name="label">label.NotActive</property>
+                </structure>
+                <structure>
+                    <property name="label">label.Both</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RegionSearch" id="28">
+            <xml-property name="customXml"><![CDATA[SelectorName=Region]]></xml-property>
+            <text-property name="promptText">label.Region</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportFooter" id="285">
+            <text-property name="promptText">label.ReportFooter</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportHeader" id="1259">
+            <text-property name="promptText">label.ReportHeader</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportTitle" id="1258">
+            <text-property name="promptText">label.ReportTitle</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RequirementTypeSearch" id="29">
+            <xml-property name="customXml"><![CDATA[SelectorName=QualRequirementType]]></xml-property>
+            <text-property name="promptText">label.QualRequirementType</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReviewProcessSearch" id="36">
+            <xml-property name="customXml"><![CDATA[SelectorName=PerformanceReviewProcess]]></xml-property>
+            <text-property name="promptText">label.ReviewProcess</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ScheduleSearch" id="8">
+            <xml-property name="customXml"><![CDATA[SelectorName=ScheduleInstance]]></xml-property>
+            <text-property name="promptText">label.ScheduleInstance</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ScheduleBlockTypeSearch" id="35">
+            <xml-property name="customXml"><![CDATA[SelectorName=Activity]]></xml-property>
+            <text-property name="promptText">label.ActivityType</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ScheduledOfferingSearch" id="13">
+            <xml-property name="customXml"><![CDATA[SelectorName=ScheduleInstance]]></xml-property>
+            <text-property name="promptText">label.ScheduleInstance</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SF182StatusSearch" id="31">
+            <xml-property name="customXml"><![CDATA[SelectorName=ExternalLearningRequestStatus]]></xml-property>
+            <text-property name="promptText">data.menu.ExternalLearningRequestStatus</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SupervisorSearch" id="37">
+            <xml-property name="customXml"><![CDATA[SelectorName=SupervisorReport]]></xml-property>
+            <text-property name="promptText">label.Supervisor</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SurveyIDCustomSearch" id="1778">
+            <xml-property name="customXml"><![CDATA[SelectorName=QuestionnaireSurvey]]></xml-property>
+            <text-property name="promptText">label.SurveyID.required</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SurveyIDSearch" id="74">
+            <xml-property name="customXml"><![CDATA[SelectorName=QuestionnaireSurvey]]></xml-property>
+            <text-property name="promptText">label.SurveyID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="UserSearch" id="5">
+            <xml-property name="customXml"><![CDATA[SelectorName=Student]]></xml-property>
+            <text-property name="promptText">label.Student</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportFormatID" id="1783">
+            <text-property name="promptText">label.ReportFormat</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">HTML</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">PDF</property>
+                    <property name="label">PDF</property>
+                    <property name="labelID">label.PDF</property>
+                </structure>
+                <structure>
+                    <property name="value">HTML</property>
+                    <property name="label">HTML</property>
+                    <property name="labelID">label.HTML</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportFormatCSV" id="1790">
+            <text-property name="promptText">label.ReportFormat</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">CSV</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">CSV</property>
+                    <property name="label">CSV</property>
+                    <property name="labelID">label.CSV</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ReportDestinationCSV" id="1789">
+            <text-property name="promptText">label.ReportDestination</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">client_local_file</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">client_local_file</property>
+                    <property name="label">Local File</property>
+                    <property name="labelID">label.LocalFile</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <parameter-group name="Populators" id="1788">
+            <text-property name="displayName">Parameters with Context</text-property>
+            <parameters>
+                <scalar-parameter name="GapThreshold" id="588">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">PotentialRatingGapThreshold</property>
+                    <text-property name="promptText">label.OrganizationGapThreshold</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <simple-property-list name="defaultValue">
+                        <value type="constant">0.2</value>
+                    </simple-property-list>
+                    <list-property name="selectionList">
+                        <structure>
+                            <property name="value">0.2</property>
+                            <property name="label">0.2</property>
+                        </structure>
+                        <structure>
+                            <property name="value">0.4</property>
+                            <property name="label">0.4</property>
+                        </structure>
+                        <structure>
+                            <property name="value">0.6</property>
+                            <property name="label">0.6</property>
+                        </structure>
+                        <structure>
+                            <property name="value">0.8</property>
+                            <property name="label">0.8</property>
+                        </structure>
+                        <structure>
+                            <property name="value">1.0</property>
+                            <property name="label">1.0</property>
+                        </structure>
+                        <structure>
+                            <property name="value">1.2</property>
+                            <property name="label">1.2</property>
+                        </structure>
+                        <structure>
+                            <property name="value">1.4</property>
+                            <property name="label">1.4</property>
+                        </structure>
+                        <structure>
+                            <property name="value">1.6</property>
+                            <property name="label">1.6</property>
+                        </structure>
+                        <structure>
+                            <property name="value">1.8</property>
+                            <property name="label">1.8</property>
+                        </structure>
+                        <structure>
+                            <property name="value">2.0</property>
+                            <property name="label">2.0</property>
+                        </structure>
+                    </list-property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="PotentialRatingMinimum" id="582">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">MinimumPotentialRating</property>
+                    <text-property name="promptText">label.PotentialRatingMinimum</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <simple-property-list name="defaultValue">
+                        <value type="constant">1</value>
+                    </simple-property-list>
+                    <list-property name="selectionList">
+                        <structure>
+                            <property name="value">1</property>
+                            <property name="label">1(0-1 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">2</property>
+                            <property name="label">2(0-2 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">3</property>
+                            <property name="label">3(0-3 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">4</property>
+                            <property name="label">4(0-4 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">5</property>
+                            <property name="label">5(0-5 year Experience)</property>
+                        </structure>
+                    </list-property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="PotentialRatingMaximum" id="583">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">MaximumPotentialRating</property>
+                    <text-property name="promptText">label.PotentialRatingMaximum</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <simple-property-list name="defaultValue">
+                        <value type="constant">1</value>
+                    </simple-property-list>
+                    <list-property name="selectionList">
+                        <structure>
+                            <property name="value">1</property>
+                            <property name="label">1(0-1 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">2</property>
+                            <property name="label">2(0-2 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">3</property>
+                            <property name="label">3(0-3 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">4</property>
+                            <property name="label">4(0-4 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">5</property>
+                            <property name="label">5(0-5 year Experience)</property>
+                        </structure>
+                    </list-property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="OwnedSuccessionOrgs" id="499">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">UserSuccessionPlanningOrganizations</property>
+                    <text-property name="promptText">label.Organization</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="CompleteStatusID" id="365">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">CompletionStatus</property>
+                    <text-property name="promptText">label.CompletionStatus</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="StrengthSelector" id="1340">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">StrengthsNumber</property>
+                    <text-property name="promptText">label.MaximumNumberOfStrengths</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="JobsSelector" id="1341">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">JobsNumber</property>
+                    <text-property name="promptText">label.MaximumNumberOfJobs</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="CascadeSteps" id="1791">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">MaximumNumberCascadeSteps</property>
+                    <text-property name="promptText">label.MaximumNumberOfCascadeSteps</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="SubordinatesOrg" id="520">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">SubordinatesOrganizations</property>
+                    <text-property name="promptText">label.Organization</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="RequestParameterSelector" id="1792">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">RequestParameter</property>
+                    <property name="hidden">true</property>
+                    <text-property name="promptText">label.CompletionStatus</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">text-box</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="ReadinessRatingMinimum" id="1793">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">MinimumReadinessRating</property>
+                    <text-property name="promptText">label.ReadinessRatingMin</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <simple-property-list name="defaultValue">
+                        <value type="constant">1</value>
+                    </simple-property-list>
+                    <list-property name="selectionList">
+                        <structure>
+                            <property name="value">1</property>
+                            <property name="label">1(0-1 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">2</property>
+                            <property name="label">2(0-2 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">3</property>
+                            <property name="label">3(0-3 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">4</property>
+                            <property name="label">4(0-4 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">5</property>
+                            <property name="label">5(0-5 year Experience)</property>
+                        </structure>
+                    </list-property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="ReadinessRatingMaximum" id="1794">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">MaximumReadinessRating</property>
+                    <text-property name="promptText">label.ReadinessRatingMax</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <simple-property-list name="defaultValue">
+                        <value type="constant">1</value>
+                    </simple-property-list>
+                    <list-property name="selectionList">
+                        <structure>
+                            <property name="value">1</property>
+                            <property name="label">1(0-1 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">2</property>
+                            <property name="label">2(0-2 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">3</property>
+                            <property name="label">3(0-3 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">4</property>
+                            <property name="label">4(0-4 year Experience)</property>
+                        </structure>
+                        <structure>
+                            <property name="value">5</property>
+                            <property name="label">5(0-5 year Experience)</property>
+                        </structure>
+                    </list-property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="OwnedInitiativeOrgs" id="1795">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">UserInitiativeOrganizations</property>
+                    <text-property name="promptText">label.Organization</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+                <scalar-parameter name="AlignedInitiativeOrgs" id="1796">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">PlateauCriterionPopulator</property>
+                            <property name="type">string</property>
+                            <property name="isVisible">true</property>
+                        </structure>
+                    </list-property>
+                    <property name="PlateauCriterionPopulator">UserAlignedInitiativeOrganizations</property>
+                    <text-property name="promptText">label.Organization</text-property>
+                    <property name="valueType">static</property>
+                    <property name="isRequired">false</property>
+                    <property name="dataType">string</property>
+                    <property name="distinct">true</property>
+                    <property name="paramType">simple</property>
+                    <property name="controlType">list-box</property>
+                    <property name="mustMatch">true</property>
+                    <property name="fixedOrder">true</property>
+                    <structure name="format">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                </scalar-parameter>
+            </parameters>
+        </parameter-group>
+        <scalar-parameter name="ApproverIDSearch" id="1797">
+            <xml-property name="customXml"><![CDATA[SelectorName=Student]]></xml-property>
+            <text-property name="promptText">label.Approvers</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ExternalRequestSearch" id="1798">
+            <xml-property name="customXml"><![CDATA[SelectorName=ExternalLearningRequest]]></xml-property>
+            <text-property name="helpText">label.ExternalRequests</text-property>
+            <text-property name="promptText">label.ExternalRequests</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AssignmentTypeSearch" id="1800">
+            <xml-property name="customXml"><![CDATA[SelectorName=RequirementType]]></xml-property>
+            <text-property name="promptText">label.AssignmentType</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="HistoryRecordActivity" id="3667">
+            <text-property name="promptText">label.HistoryRecordActivity</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant"> </value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value"> </property>
+                    <property name="label">label.All</property>
+                </structure>
+                <structure>
+                    <property name="value">I</property>
+                    <property name="label">label.Insert</property>
+                </structure>
+                <structure>
+                    <property name="value">M</property>
+                    <property name="label">label.Modify</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AdminSearch" id="3694">
+            <xml-property name="customXml"><![CDATA[SelectorName=User]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.AdminID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AccountCodeSearch" id="3669">
+            <xml-property name="customXml"><![CDATA[SelectorName=AccountCode]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.AccountCode</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AssignmentProfileSearch" id="3670">
+            <xml-property name="customXml"><![CDATA[SelectorName=AssignmentProfile]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.AssignmentProfileID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="BrandingStyleSearch" id="3671">
+            <xml-property name="customXml"><![CDATA[SelectorName=BrandingStyle]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.BrandingStyleID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CancellationPolicySearch" id="3672">
+            <xml-property name="customXml"><![CDATA[SelectorName=CancellationPolicy]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.CancellationPolicyID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CatalogSearch" id="3673">
+            <xml-property name="customXml"><![CDATA[SelectorName=Catalog]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.CatalogID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ComponentSourceSearch" id="3674">
+            <xml-property name="customXml"><![CDATA[SelectorName=ComponentSource]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.ComponentSourceID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ContentPackageSearch" id="3695">
+            <xml-property name="customXml"><![CDATA[SelectorName=ContentPackage]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.ContentPackageID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CostNameSearch" id="3675">
+            <xml-property name="customXml"><![CDATA[SelectorName=CostName]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.CostName</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CountrySearch" id="3676">
+            <xml-property name="customXml"><![CDATA[SelectorName=Country]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.CountryID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DeliveryMethodSearch" id="3677">
+            <xml-property name="customXml"><![CDATA[SelectorName=DeliveryMethod]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.DeliveryMethodID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CouponSearch" id="3678">
+            <xml-property name="customXml"><![CDATA[SelectorName=DiscountCoupons]]></xml-property>
+            <property name="newHandlerOnEachEvent">false</property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.CouponCode</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="DomainRestrictionSearch" id="3679">
+            <xml-property name="customXml"><![CDATA[SelectorName=DomainRestriction]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.DomainRestrictionID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="EmployeeTypeSearch" id="3680">
+            <xml-property name="customXml"><![CDATA[SelectorName=EmployeeType]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.EmployeeTypeID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="EmployeeStatusSearch" id="3681">
+            <xml-property name="customXml"><![CDATA[SelectorName=EmployeeStatus]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.EmployeeStatusID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="FinancialTransactionSearch" id="3683">
+            <xml-property name="customXml"><![CDATA[SelectorName=FinancialTransaction]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.transactionCode</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="LabelSearch" id="3684">
+            <xml-property name="customXml"><![CDATA[SelectorName=I18nLabel]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.LabelID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ObjectiveSearch" id="3691">
+            <xml-property name="customXml"><![CDATA[SelectorName=Objective]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.ObjectiveID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OrderSearch" id="3685">
+            <xml-property name="customXml"><![CDATA[SelectorName=Order]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.OrderNumber</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="JobLocationSearch" id="3682">
+            <xml-property name="customXml"><![CDATA[SelectorName=JobLocation]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.JobLocationID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="JobPositionNumberSearch" id="3686">
+            <xml-property name="customXml"><![CDATA[SelectorName=PositionNumber]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.PositionNumberID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="QuestionSearch" id="3687">
+            <xml-property name="customXml"><![CDATA[SelectorName=Question]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.QuestionID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RequirementSearch" id="3688">
+            <xml-property name="customXml"><![CDATA[SelectorName=Requirement]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.RequirementID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RoleSearch" id="3689">
+            <xml-property name="customXml"><![CDATA[SelectorName=Role]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.RoleID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="StudentIntroductionSearch" id="3690">
+            <xml-property name="customXml"><![CDATA[SelectorName=StudentIntroduction]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.UIDataID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="SubjectAreaSearch" id="3692">
+            <xml-property name="customXml"><![CDATA[SelectorName=SubjectArea;Type=TreeNode]]></xml-property>
+            <text-property name="promptText">label.SubjectAreaID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="TaskSearch" id="3693">
+            <xml-property name="customXml"><![CDATA[SelectorName=Task]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.TaskID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="TrainingRequestPeriodSearchPicker" id="3696">
+            <xml-property name="customXml"><![CDATA[SelectorName=TrainingRequestPeriod;Picker=true]]></xml-property>
+            <text-property name="promptText">label.TrainingRequestPeriod</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IncludeSubOrganizations" id="3697">
+            <text-property name="promptText">label.IncludeSubOrganizations</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Y</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">label.Yes</property>
+                </structure>
+                <structure>
+                    <property name="value">N</property>
+                    <property name="label">label.No</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="GovernmentReportingCompletionYear" id="3699">
+            <xml-property name="customXml"><![CDATA[SelectorName=GovernmentReportingCompletionYear]]></xml-property>
+            <text-property name="promptText">label.Year</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="LegalEntity2483Search" id="3700">
+            <xml-property name="customXml"><![CDATA[SelectorName=LegalEntity2483]]></xml-property>
+            <text-property name="promptText">label.legalEntity2483</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="UserStatus" id="3701">
+            <text-property name="promptText">label.StudentStatus</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">N</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">N</property>
+                    <property name="label">Active</property>
+                    <property name="labelID">label.Active</property>
+                </structure>
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">Not Active</property>
+                    <property name="labelID">label.NotActive</property>
+                </structure>
+                <structure>
+                    <property name="label">Both</property>
+                    <property name="labelID">label.Both</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="IncludeLearningEventDetails" id="3702">
+            <text-property name="promptText">label.IncludeLearningEventDetails</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Y</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">label.Yes</property>
+                </structure>
+                <structure>
+                    <property name="value">N</property>
+                    <property name="label">label.No</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ProgramSearch" id="3703">
+            <xml-property name="customXml"><![CDATA[SelectorName=Program]]></xml-property>
+            <text-property name="promptText">label.ProgramID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ExternalLearningLinkSearch" id="13703">
+            <xml-property name="customXml"><![CDATA[SelectorName=ExternalLink;Type=ExternalLink]]></xml-property>
+            <text-property name="promptText">label.ExternalLink</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ProgramStatus" id="3704">
+            <text-property name="promptText">label.ProgramStatus</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">B</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Y</property>
+                    <property name="label">Completed</property>
+                    <property name="labelID">label.Completed</property>
+                </structure>
+                <structure>
+                    <property name="value">N</property>
+                    <property name="label">Not Completed</property>
+                    <property name="labelID">label.NotCompleted</property>
+                </structure>
+                <structure>
+                    <property name="value">B</property>
+                    <property name="label">Both</property>
+                    <property name="labelID">label.Both</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ProgramTypeSearch" id="3705">
+            <xml-property name="customXml"><![CDATA[SelectorName=ProgramType]]></xml-property>
+            <text-property name="promptText">label.ProgramType</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="OpenContentNetworkCourseSearch" id="3706">
+            <xml-property name="customXml"><![CDATA[SelectorName=OpenContentNetwork;Type=OCN]]></xml-property>
+            <text-property name="promptText">label.OpenContentNetwork</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="QuizSearch" id="3707">
+            <xml-property name="customXml"><![CDATA[SelectorName=Quiz]]></xml-property>
+            <text-property name="promptText">label.Quiz</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CollectionSearch" id="3708">
+            <xml-property name="customXml"><![CDATA[SelectorName=Collection;Type=Collection]]></xml-property>
+            <text-property name="promptText">label.Collection</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AssessmentExamSearch" id="3710">
+            <xml-property name="customXml"><![CDATA[SelectorName=AssessmentExam]]></xml-property>
+            <text-property name="promptText">label.Assessment</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="ExamEntityType" id="3711">
+            <text-property name="promptText">label.ExamEntityType</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Assessment</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Assessment</property>
+                    <property name="label">label.Assessment</property>
+                </structure>
+                <structure>
+                    <property name="value">PQE</property>
+                    <property name="label">label.PQE</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="UserSearchPicker" id="3722">
+            <xml-property name="customXml"><![CDATA[SelectorName=Student;Picker=true]]></xml-property>
+            <text-property name="promptText">label.Student</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="InstructorSearchPicker" id="3723">
+            <xml-property name="customXml"><![CDATA[SelectorName=Instructor;Picker=true]]></xml-property>
+            <text-property name="promptText">label.Instructor</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="AdminSearchPicker" id="3724">
+            <xml-property name="customXml"><![CDATA[SelectorName=User;Picker=true]]></xml-property>
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">PlateauCriterionPopulator</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+            </list-property>
+            <property name="PlateauCriterionPopulator">RequestParameter</property>
+            <text-property name="promptText">label.AdminID</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="PlateauDataSource" id="42">
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="vJdbcDataSource" id="1773">
+            <property name="odaDriverClass">de.simplicit.vjdbc.VirtualDriver</property>
+        </oda-data-source>
+    </data-sources>
+    <page-setup>
+        <simple-master-page name="NewSimpleMasterPage" id="3668"/>
+    </page-setup>
+</library>
