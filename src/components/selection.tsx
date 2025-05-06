@@ -206,9 +206,8 @@ export const ScheduleSidebar: React.FC<{
 }> = ({ onSelect, selectedID }) => {
   const { t } = useTranslation();
   const { data, isLoading } = useDataStore();
-  const { getSFlabel, labels } = useLabelStore();
+  const { getSFlabel } = useLabelStore();
   const { getDateTime } = usePreferencesStore();
-  console.log("labels in selection", labels);
   const scheduleData = data?.sched;
   const [searchQuery, setSearchQuery] = useState<string>("");
 

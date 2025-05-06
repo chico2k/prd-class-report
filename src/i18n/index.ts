@@ -25,13 +25,11 @@ i18n.use(initReactI18next).init({
 });
 
 // Function to update language when preferences change
-export const updateLanguage = () => {
-  const currentLang = window.preferences?.localeId || "English";
-  if (i18n.language !== currentLang) {
-    console.log(`Changing language from ${i18n.language} to ${currentLang}`);
-    i18n.changeLanguage(currentLang);
+export const updateLanguage = (localeId: string) => {
+  if (i18n.language !== localeId) {
+    i18n.changeLanguage(localeId);
   }
-  return currentLang;
+  return localeId;
 };
 
 export default i18n;

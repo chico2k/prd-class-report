@@ -23,6 +23,9 @@ dependencies:
   i18next-browser-languagedetector:
     specifier: ^8.1.0
     version: 8.1.0
+  immer:
+    specifier: ^10.1.1
+    version: 10.1.1
   polished:
     specifier: ^4.3.1
     version: 4.3.1
@@ -37,7 +40,7 @@ dependencies:
     version: 15.5.1(i18next@25.0.2)(react-dom@19.1.0)(react@19.1.0)(typescript@5.7.3)
   zustand:
     specifier: ^5.0.4
-    version: 5.0.4(@types/react@19.1.2)(react@19.1.0)
+    version: 5.0.4(@types/react@19.1.2)(immer@10.1.1)(react@19.1.0)
 
 devDependencies:
   '@eslint/js':
@@ -2677,6 +2680,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immer@10.1.1:
+    resolution: {integrity: sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw==}
+    dev: false
+
   /import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
@@ -4382,7 +4389,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zustand@5.0.4(@types/react@19.1.2)(react@19.1.0):
+  /zustand@5.0.4(@types/react@19.1.2)(immer@10.1.1)(react@19.1.0):
     resolution: {integrity: sha512-39VFTN5InDtMd28ZhjLyuTnlytDr9HfwO512Ai4I8ZABCoyAj4F1+sr7sD1jP/+p7k77Iko0Pb5NhgBFDCX0kQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
@@ -4401,5 +4408,6 @@ packages:
         optional: true
     dependencies:
       '@types/react': 19.1.2
+      immer: 10.1.1
       react: 19.1.0
     dev: false

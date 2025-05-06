@@ -1,14 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { updateLanguage } from "../i18n";
 import { useCallback } from "react";
 
 export const useTranslationUtils = () => {
   const { t, i18n } = useTranslation();
-
-  // Force reload of language from preferences
-  const refreshLanguage = useCallback(() => {
-    updateLanguage();
-  }, []);
 
   // Get current language
   const getCurrentLanguage = useCallback(() => {
@@ -26,7 +20,6 @@ export const useTranslationUtils = () => {
   return {
     t,
     i18n,
-    refreshLanguage,
     getCurrentLanguage,
     setLanguage,
   };
