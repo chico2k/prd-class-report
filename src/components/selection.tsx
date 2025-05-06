@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useMemo } from "react";
 import styled from "@emotion/styled";
 import { Sched } from "../types/indes";
-import { useData } from "../hooks/use-data";
 import { colors } from "../config/colors";
-import { getDateTime } from "../helper/getDateTime";
 import { useTranslation } from "react-i18next";
-import { getSFlabel } from "../i18n/getSFlabel";
+import { useDataStore } from "../store/dataStore";
+import { useLabelStore } from "../store/labelStore";
+import { usePreferencesStore } from "../store/preferencesStore";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -205,7 +205,10 @@ export const ScheduleSidebar: React.FC<{
   selectedID: number | null;
 }> = ({ onSelect, selectedID }) => {
   const { t } = useTranslation();
-  const { data, isLoading } = useData();
+  const { data, isLoading } = useDataStore();
+  const { getSFlabel, labels } = useLabelStore();
+  const { getDateTime } = usePreferencesStore();
+  console.log("labels in selection", labels);
   const scheduleData = data?.sched;
   const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -275,12 +278,14 @@ export const ScheduleSidebar: React.FC<{
     <SidebarContainer>
       <StickyHeader>
         <SidebarTitle>{t("app_title")}</SidebarTitle>
-        <SearchInput
-          type="text"
-          placeholder={getSFlabel("alt.Search")}
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+        {!isLoading && (
+          <SearchInput
+            type="text"
+            placeholder={getSFlabel("alt.Search")}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        )}
       </StickyHeader>
 
       <ScrollableContent>

@@ -18,7 +18,6 @@ const FORCE_DEBUG_DISPLAY = new URLSearchParams(window.location.search).has(
 );
 
 if (FORCE_DEBUG_DISPLAY) {
-  console.log("Debug report display forced by URL parameter");
   shouldRender = false;
   displayReportUnavailable();
 } else if (isProd && !verifyHost()) {

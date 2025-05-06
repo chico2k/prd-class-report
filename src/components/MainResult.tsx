@@ -1,12 +1,11 @@
 import React, { useMemo } from "react";
 import styled from "@emotion/styled";
-import { useData } from "../hooks/use-data";
 import { useEmailSelection } from "../hooks/useEmailSelection";
 import { Enroll, GroupedUsers } from "../types/indes";
 import { colors } from "../config/colors";
 import { useTranslation } from "react-i18next";
-import { getSFlabel } from "../i18n/getSFlabel";
-
+import { useDataStore } from "../store/dataStore";
+import { useLabelStore } from "../store/labelStore";
 // Styled components
 const Container = styled.div`
   font-family: Arial, sans-serif;
@@ -255,7 +254,8 @@ export const MainResult: React.FC<{ selectedID: number | null }> = ({
   selectedID,
 }) => {
   const { t } = useTranslation();
-  const { data, isLoading } = useData();
+  const { data, isLoading } = useDataStore();
+  const { getSFlabel } = useLabelStore();
 
   const {
     selectedEmails,

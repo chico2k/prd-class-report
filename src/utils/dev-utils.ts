@@ -5,8 +5,10 @@
 
 /**
  * Check if running in development mode
+ * Force it to true for now to test the mock data loading
  */
-export const isDevelopment = import.meta.env.DEV;
+// export const isDevelopment = import.meta.env.DEV;
+export const isDevelopment = true; // Force to true for testing
 
 /**
  * Execute a callback only in development mode

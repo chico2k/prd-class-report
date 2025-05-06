@@ -494,6 +494,8 @@ if (typeof JSON !== "object") {
 function getLabel(label, fallback) {
   var locale = null;
 
+  var environment = whichEnvironment();
+
   // Get current locale - could be a string or Java Locale object
   locale = reportContext.getLocale();
 
@@ -506,7 +508,7 @@ function getLabel(label, fallback) {
   if (labelValue != null) return String(labelValue);
 
   // In preview mode, show missing label info for debugging
-  if (isPreviewMode()) {
+  if (environment === "preview") {
     return String(fallback);
   }
 
@@ -634,7 +636,6 @@ function inspectObject(obj) {
 /* Function to dynamically create JSON object from row data */
 function createJsonFromRow(row, columnDefns) {
   var result = {};
-  var inPreviewMode = isPreviewMode();
 
   try {
     // Get all property names from the row object
@@ -715,7 +716,7 @@ function getLabelsFromSF() {
  * Detects whether the report is running in preview mode or production environment
  * @return {boolean} true if running in preview mode, false if in production
  */
-function isPreviewMode() {
+function whichEnvironment() {
   try {
     // In preview mode, getMessage with a standard label key often returns null
     // while in production it should return the actual value
@@ -726,20 +727,16 @@ function isPreviewMode() {
 
     // If null, we're likely in preview mode
     if (testLabel === null) {
-      return true;
+      return "preview";
     }
 
     // Additional check - sometimes in preview mode, the app context is missing or has specific flags
-    var appContext = reportContext.getAppContext();
-    if (!appContext || appContext.get("isPreview") === true) {
-      return true;
-    }
 
     // If we get here, we're probably in production
-    return false;
+    return "production";
   } catch (e) {
     // If there's an error in detection, assume we're in preview mode to be safe
     // (safer to show debug info than not)
-    return true;
+    return "preview";
   }
 }

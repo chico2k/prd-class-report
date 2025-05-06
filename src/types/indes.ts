@@ -80,7 +80,9 @@ declare global {
       sched: Sched[];
       request: Request[];
     };
-    labels: Labels;
-    preferences: Preferences;
+    labels?: Labels;
+    preferences?: Preferences;
+    environment: "preview" | "production";
+    debug: boolean;
   }
 }

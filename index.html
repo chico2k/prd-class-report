@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Link App</title>
+    <script>
+      if (!window.environment) {
+        window.environment = "preview";
+      }
+    </script>
   </head>
   <body style="background-color: #fafafa; color: #000000; width: 100vw">
     <div id="root"></div>
