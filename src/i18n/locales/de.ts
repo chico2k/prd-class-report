@@ -22,5 +22,7 @@ export default {
   no_results: "Keine Ergebnisse gefunden",
   results: "Ergebnisse",
 
+  not_available: "Nicht verfügbar",
+
   // Add any other translations needed for your application
 };

@@ -402,7 +402,7 @@ export const MainResult: React.FC<{ selectedID: number | null }> = ({
                     </Name>
                     <br />
                     <Email disabled={!user.EMAIL_ADDR}>
-                      {user.EMAIL_ADDR || t("no_results")}
+                      {user.EMAIL_ADDR || t("not_available")}
                     </Email>
                   </Label>
                 </UserItem>

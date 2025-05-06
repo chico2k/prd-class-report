@@ -21,6 +21,7 @@ export default {
   select_option: "Select an option",
   no_results: "No results found",
   results: "Results",
+  not_available: "Not available",
 
   // Add any other translations needed for your application
 };
