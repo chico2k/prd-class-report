@@ -651,6 +651,33 @@ function createJsonFromRow(row, columnDefns) {
       ) {
         var value = row[prop];
 
+        var checkForDuplicate = [
+          "SCHD_ID",
+          "CPNT_ID",
+          "CPNT_TYP_ID",
+          "REV_DTE",
+        ];
+
+        var isDuplicate = false;
+        for (var i = 0; i < checkForDuplicate.length; i++) {
+          if (
+            prop.indexOf(checkForDuplicate[i]) === 0 &&
+            !isNaN(prop.charAt(prop.length - 1))
+          ) {
+            isDuplicate = true;
+            break;
+          }
+        }
+
+        if (isDuplicate) {
+          continue;
+        }
+
+        if (prop.indexOf("CC_") === 0) {
+          var desc_prop = prop + "_DESC";
+          result[desc_prop] = value;
+        }
+
         // Look for fields that need label processing
         // Format 1: Explicit GETLABEL: prefix
         if (typeof value === "string" && value.indexOf("GETLABEL:") === 0) {
@@ -701,6 +728,12 @@ function getLabelsFromSF() {
     "label.Select": "_Select",
     "alt.SendEmail": "_Send Email",
     "alt.Search": "_Search",
+    "label.ComponentDescription": "_Item Description",
+    "label.Title": "_Title",
+    "label.Column.ItemID": "_Item ID",
+    "label.RevisionDate": "_Revision Date",
+    "label.ComponentTypeDescription": "_Item Type Description",
+    "label.ComponentTypeID": "_Item Type ID",
   };
 
   for (var key in labels) {

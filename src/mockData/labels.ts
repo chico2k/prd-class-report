@@ -11,4 +11,22 @@ export const labels = {
   "label.Select": "_Select",
   "alt.SendEmail": "_Send Email",
   "alt.Search": "_Search",
+  "label.ComponentDescription": "_Item Description",
+  "label.Title": "_Title",
+  "label.Column.ItemID": "_Item ID",
+  "label.RevisionDate": "_Revision Date",
+  "label.ComponentTypeDescription": "_Item Type Description",
+  "label.ComponentTypeID": "_Item Type ID",
+};
+
+export const headerLabels = {
+  SCHD_ID: "label.ScheduleID",
+  CLASS_START_DATE: "label.From",
+  CLASS_END_DATE: "label.To",
+  CPNT_TITLE: "label.Title",
+  CPNT_DESC: "label.ComponentDescription",
+  CPNT_ID: "label.Column.ItemID",
+  REV_DTE: "label.RevisionDate",
+  CPNT_TYP_DESC: "label.ComponentTypeDescription",
+  CPNT_TYP_ID: "label.ComponentTypeID",
 };

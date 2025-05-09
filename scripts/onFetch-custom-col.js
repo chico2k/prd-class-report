@@ -1,24 +1,3 @@
-/**
- * Handle custom column data for different types (schedules, users, etc.)
- * Transforms row data into a structured format:
- * {
- *   "sched": {
- *     "10": {  // Column number as key
- *       "referenced": true/false,
- *       "values": {
- *         "user_id1": "user_desc1",
- *         "user_id2": "user_desc2"
- *       }
- *     },
- *     "20": {
- *       // Another column
- *     }
- *   },
- *   "user": {
- *     // User column data similarly structured
- *   }
- * }
- */
 function handleCustomColByType(row, colType) {
   // Initialize data structure if needed
   if (!vars["data"]) {
@@ -89,6 +68,12 @@ function onFetchCustomCol(row) {
     // Fallback to detect type if COL_TYPE field is missing
     if (row["SCHED"]) {
       handleCustomColByType(row, "SCHED");
+    }
+    if (row["USER"]) {
+      handleCustomColByType(row, "USER");
+    }
+    if (row["CPNT"]) {
+      handleCustomColByType(row, "CPNT");
     }
     // Add other type detection logic here if needed
   }

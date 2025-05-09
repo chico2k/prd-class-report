@@ -5,6 +5,8 @@ import { resolve } from "path";
 import fs from "fs";
 import path from "path";
 import config from "./src/config";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+import tailwindcss from "@tailwindcss/vite";
 
 // Domain encoding helper for build time
 const encodeDomain = (domain: string): string => {
@@ -88,7 +90,12 @@ export default defineConfig(({ mode, command }) => {
   }
 
   return {
-    plugins: [react(), viteSingleFile()],
+    plugins: [
+      TanStackRouterVite({ target: "react", autoCodeSplitting: true }),
+      react(),
+      tailwindcss(),
+      viteSingleFile(),
+    ],
     build: {
       outDir,
       minify: "terser",
@@ -142,6 +149,7 @@ export default defineConfig(({ mode, command }) => {
     },
     resolve: {
       alias: {
+        "@": path.resolve(__dirname, "./src"),
         // In production builds, replace all imports of mockData with empty modules
         ...(isProd && {
           "src/mockData": resolve(__dirname, "src/utils/mock-empty.ts"),

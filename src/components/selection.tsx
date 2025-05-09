@@ -3,9 +3,7 @@ import styled from "@emotion/styled";
 import { Sched } from "../types/indes";
 import { colors } from "../config/colors";
 import { useTranslation } from "react-i18next";
-import { useDataStore } from "../store/dataStore";
-import { useLabelStore } from "../store/labelStore";
-import { usePreferencesStore } from "../store/preferencesStore";
+import { useStore } from "../store";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -205,9 +203,7 @@ export const ScheduleSidebar: React.FC<{
   selectedID: number | null;
 }> = ({ onSelect, selectedID }) => {
   const { t } = useTranslation();
-  const { data, isLoading } = useDataStore();
-  const { getSFlabel } = useLabelStore();
-  const { getDateTime } = usePreferencesStore();
+  const { data, isLoading, getSFlabel, getDateTime } = useStore();
   const scheduleData = data?.sched;
   const [searchQuery, setSearchQuery] = useState<string>("");
 

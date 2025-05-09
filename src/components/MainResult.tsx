@@ -4,8 +4,7 @@ import { useEmailSelection } from "../hooks/useEmailSelection";
 import { Enroll, GroupedUsers } from "../types/indes";
 import { colors } from "../config/colors";
 import { useTranslation } from "react-i18next";
-import { useDataStore } from "../store/dataStore";
-import { useLabelStore } from "../store/labelStore";
+import { useStore } from "../store";
 // Styled components
 const Container = styled.div`
   font-family: Arial, sans-serif;
@@ -254,8 +253,7 @@ export const MainResult: React.FC<{ selectedID: number | null }> = ({
   selectedID,
 }) => {
   const { t } = useTranslation();
-  const { data, isLoading } = useDataStore();
-  const { getSFlabel } = useLabelStore();
+  const { data, isLoading, getSFlabel } = useStore();
 
   const {
     selectedEmails,
@@ -297,7 +295,7 @@ export const MainResult: React.FC<{ selectedID: number | null }> = ({
     // Use the ITEM_KEY field for direct comparison
     // This is more efficient as it avoids multiple string comparisons and date conversion
     return data.request.filter(
-      (request) => request.ITEM_KEY === selectedSchedule.ITEM_KEY
+      (request) => request.ITEM_KEY === selectedSchedule.INTERNAL_ITEM_KEY
     );
   }, [data, selectedSchedule]);
 

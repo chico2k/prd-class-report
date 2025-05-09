@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import i18n from "../../i18n";
 import { colors } from "../../config/colors";
-import { usePreferencesStore } from "../../store/preferencesStore";
+import { useStore } from "../../store";
 
 const SwitcherContainer = styled.div`
   position: fixed;
@@ -54,7 +54,7 @@ export const LanguageSwitcher: React.FC = () => {
   const isDev = import.meta.env.DEV;
   const [currentLang, setCurrentLang] = useState(i18n.language);
 
-  const { setLocaleId } = usePreferencesStore();
+  const { setLocaleId } = useStore();
 
   // Update local state when i18n language changes
   useEffect(() => {

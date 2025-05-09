@@ -1,3 +1,5 @@
+import * as XLSXType from "xlsx";
+
 export interface Enroll {
   SCHD_ID: number;
   ENRL_STAT_ID: string;
@@ -29,13 +31,34 @@ export interface Sched {
   CPNT_TYP_ID: string;
   CPNT_TYP_DESC: string;
   REV_DTE: string;
-  ITEM_KEY: string;
+  INTERNAL_ITEM_KEY: string;
+}
+
+export interface CustomColumnsEntry {
+  label: string;
+  referenced: boolean;
+  values: {
+    [id: string]: string;
+  };
+}
+
+export interface CustomColumns {
+  sched?: {
+    [id: string]: CustomColumnsEntry;
+  };
+  user?: {
+    [id: string]: CustomColumnsEntry;
+  };
+  cpnt?: {
+    [id: string]: CustomColumnsEntry;
+  };
 }
 
 export interface Data {
   enroll: Enroll[];
   sched: Sched[];
   request: Request[];
+  customColumns: CustomColumns;
 }
 
 export interface GroupedUsers {
@@ -79,10 +102,28 @@ declare global {
       enroll: Enroll[];
       sched: Sched[];
       request: Request[];
+      customColumns: CustomColumns;
     };
     labels?: Labels;
     preferences?: Preferences;
     environment: "preview" | "production";
     debug: boolean;
   }
+  const XLSX: typeof XLSXType;
 }
+
+export type ColumnDefinitions = {
+  id: string;
+  label: string;
+  referenced: boolean;
+  columnType:
+    | "customColumnSched"
+    | "customColumnUser"
+    | "customColumnCpnt"
+    | "standard";
+  customColumnNumber?: number;
+  visible: boolean;
+  orderNumber: number;
+  sorting?: "asc" | "desc" | null;
+  dateField: boolean;
+};

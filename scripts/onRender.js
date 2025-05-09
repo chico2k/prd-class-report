@@ -9,7 +9,7 @@ var scriptContent =
           		
     "globalThis.labels =" + JSON.stringify(getLabelsFromSF())  + ";\n" +
       // prettier-ignore
-     "globalThis.isPreviewMode =" + JSON.stringify(isPreviewMode())  + ";\n" +
+     "globalThis.environment =" + JSON.stringify(whichEnvironment())  + ";\n" +
     "</script>\n";
 
 scriptContent;
